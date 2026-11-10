@@ -8,7 +8,17 @@ image cg sarita_lab01:
 image cg sarita_lab02:
     "assets/images/cg/sarita_lab-02.png"
     xysize (1920, 1080)
+image cg sarita_computer_front:
+    "assets/images/cg/sarita-with-comp.png"
+    xysize (1920, 1080)
 
+image cg badending:
+    "assets/images/cg/ch01_bad_ending.png"
+    xysize (1920, 1080)
+
+image cg goodending:
+    "assets/images/cg/ch01_good_ending.png"
+    xysize (1920, 1080)
 ## •❅───✧❅✦❅✧───❅•
 #     Backgrounds
 ## •❅───✧❅✦❅✧───❅•
@@ -28,3 +38,6 @@ image bg school_frontview:
 
 image bg comlab:
     "assets/images/bg/computer_lab.jpg"
+
+image bg comlab_outside:
+    "assets/images/splash/comlab_outside_idle.jpg"

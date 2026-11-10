@@ -1,10 +1,10 @@
+
 label main_ch01:
     with dissolve_scene_full
     stop music
 
     # --- SCENE 1 --- 
-    sarita "W-wait for me, steph!"
-    stephanie "Come on! you can be faster than that!"
+    sarita "S-steph! Wait for me!"
 
     scene bg school_frontview with dissolve_scene_full
     play music bg1 fadein 1.0 loop
@@ -14,25 +14,27 @@ label main_ch01:
     show screen location_header("School Gate")
 
     show sarita awkward at t21
-    sarita "{i}*huff *huff*{/i} G-good morning."
+    sarita "{i}*huff *huff*{/i} G-good morning..."
     show stephanie smile at t22
-    stephanie "Good morning~"
-    stephanie "Look at this lighting, Sarita! The morning wind is doing wonders for my hair. Perfect for a quick story post!"
+    stephanie "Good morning sari~"
+    stephanie "Look, Sarita. The lighting and the morning wind is perfect for an instagram post!"
     show sarita awkward at s21
-    sarita "A-ah... yeah, it looks really nice on you."
-
-    "Stephanie and I have been best friends since kindergarten... but standing next to her, I always feel like an accidental background extra."
+    sarita "Y-yeah… I guess."
+    "This is my best friend, Stephanie. We've always been together since kindergarten and she was my one and only friend."
 
     show stephanie neutral with dissolve_character
     stephanie "Did you wake up well?"
     show sarita at t21
     show sarita neutral with dissolve_character
-    sarita "Y-yeah."
+    sarita "Yeah..."
 
     show sarita at fo21
     hide sarita
+    pause 0.3
     show stephanie at fo22
-    hide sarita
+    pause 0.2
+    hide stephanie
+
     show s1 at t21
     # s(1-3) means silhouette/s. These silhouettes are defined at definitions.rpy.
     s1 "Wait, isn’t that THE Stephanie?" 
@@ -40,29 +42,21 @@ label main_ch01:
     s2 "Wait, really?! It is her! Oh my god, I’m such a big fan!" 
     show s1 at fo21
     hide s1
+    pause 0.3
     show s2 at fo22
+    pause 0.2
     hide s2
 
-    "I slowly lower my head as I listen to the whispers and cheers surrounding us from every direction." 
-
     show sarita neutral at fi21
-    sarita "You're really popular, Steph." 
+    sarita "Aren't you mostly famous for your social media… things?"   
     show stephanie smile at fi22
-    stephanie "Hehe, of course I am! You know, I spent half my break keeping up with my social media followers." 
+    stephanie "Yup! You know, I spent half my semester break raising up more of my followers." 
+    show sarita nervous at s21
+    sarita "Is that so…"
 
-    "Stephanie gently slides her fingers into my palm and locks her grip with mine. Her hand feels warm and reassuring." 
+    "A wave of loneliness washed over me as I listened to Steph's babbling."
 
-    show stephanie neutral with dissolve_character
-    stephanie "Hey, sarita?"
-    sarita "Yeah?"
-    stephanie "Are you nervous for your first day?"
-    show sarita awkward with dissolve_character
-    sarita "I-I am, but I am also pretty excited."
-    show stephanie happy with dissolve_character
-    stephanie "Don't worry! You've got this. I believe in you."
-    show sarita happy with dissolve_character
-    sarita "Thank you, steph."
-
+    
 
     # --- SCENE 2 --- 
     hide screen location_header with dissolve
@@ -84,254 +78,274 @@ label main_ch01:
     
     $ quick_menu = True
 
-    "We went inside our assigned classroom. It was quiet at first... but that didn't last long."
-    "The moment break time arrived, the room erupted into noise." 
+    "After talking for a while, we went inside the classroom. It was quite loud and vibrant as usual."
+    sarita "{i}(Steph's busy talking to her friends…){/i}"
+    sarita "{i}*sigh*{/i} I better finish my remaining assignments then…"
 
-    show stephanie happy at t31
-    stephanie "Mariaaaa! Long time no see!"
-    show maria happy zorder 3 at t32
-    maria "Stephie! It really has been a long time hehe. How have you been?"
-    stephanie "You know me. I’ve been taking care of my beautiful appearance since the vacation started!"
-    stephanie neutral "Ugh, dad didn’t want me to go to south korea thoooooough~"
-    maria neutral "Why’s that?"
-    stephanie "He said he was too busy with the upcoming local elections, so I couldn't go anywhere for fun." 
-    show gabriel smile zorder 2 at t33
-    gabriel "Yoooo! What are we talking about?"
+    "As I do my assignments, my ears catch the giggling and murmurs from the seats behind me."
+    "Curious—I looked behind me and saw three girls directly staring at me and grinning."
 
-    "I hadn't realized, stephanie's middle school friends enrolled here as well."
+    show s2 at t11
+    s2 "Isn't she Stephanie's friend?"
+    show s1 at t21
+    s1 "Friend? You mean her loyal dog?"
+    show s3 at t33(0.60)
+    s3 "I know right? Tch. She's really annoying."
+    show s2 at fo11
+    pause 0.3
+    hide s2
+    show s1 at fo21
+    pause 0.3
+    hide s1
+    show s3 at fo33(0.60)
+    pause 0.3
+    hide s3
 
-    show stephanie happy zorder 4 at h31
-    stephanie "Gabriel? Long time no see!"
-    show gabriel happy zorder 2 at h33
-    gabriel "Hahahaha! Sure is!"
-    show stephanie smile with dissolve_character
-    stephanie "You're really loud as usual."
-    show gabriel smile with dissolve_character
-    gabriel "You don't say?"
-    show gabriel neutral with dissolve_character
-    gabriel "?"
-    show gabriel smile with dissolve_character
-    gabriel "Oh, yo, Sarita! Didn't even see you sitting there behind Steph. What’s up?" 
-    # show sarita awkward zorder 1 at t21
-    sarita_s awkward "Oh-uh, I'm okay. Just listening."
-    maria "So, Steph, what did you and Sarita do during the break?"
-    show stephanie neutral with dissolve_character 
-    stephanie "Oh, we just hung out at some local spots. Nothing special."
-    show maria happy zorder 3 at h32
-    maria "Aww, local dates?"
-    show stephanie worried with dissolve_character
-    show gabriel happy zorder 2 at h33
-    gabriel "Yiiiiiiiie~"
-    show stephanie angry zorder 4 at rage(300)
-    stephanie "Gab… You…"
-    show gabriel smile with dissolve_character
-    show maria neutral with dissolve_character
-    gabriel "Whoopsies. See y'all."
-    show gabriel at rhide
-    hide gabriel
-    pause 0.8
-    # gabriel hussed
-    stephanie "Come back here gabriel!!!"
-    show stephanie at rhide(.50)
-    hide stephanie
-    pause 0.5
-    # screen shakes and loud sfx ig
-    # with vpunch
-    # pause 0.8
-    # with hpunch
-    # pause 0.4
-    # with vpunch
-    # TODO: Awkward expression
-    # show maria awkward at dissolve_character
-    show maria smile with dissolve_character
-    maria "Oh boy, they're going to cause trouble again. I'm gonna go ahead and stop them, see ya later sarita."
-    sarita_s "O-okay."
-    show maria at hide
-    hide maria
-    "..."
-    "They… are really loud as always."
-    pause 0.7
-
-    # --- SCENE 3  --- 
-    show s1 at t11
-    s1 "Okay class, take your seats. We're starting our introductions."
-
-    hide screen location_header with dissolve
-    $ quick_menu = False
-    scene black with fade
-    stop music fadeout 0.5
-    hide top_frame with dissolve
-    hide bottom_frame with dissolve
+    "I immediately turned my head away and kept my eyes glued to my desk. I told myself it was okay and it would stop soon…"
 
     scene black with fade
-    centered "{size=50}{color=#ffffff}After Introductions{w=0.5}.{w=0.5}.{w=0.5}.{/color}{/size}"
 
-    $ quick_menu = True
-    scene bg classroom with dissolve_scene_full
-    show top_frame at top_bar_pos
-    show bottom_frame at bottom_bar_pos
-    show screen location_header("Classroom")
-
-    show gabriel happy at t31
-    gabriel "Man~ I was sweating bullets during my turn!"
-    show maria happy at t32
-    maria "Haha, I had to cover my mouth because you kept stuttering!"
-    show gabriel neutral at s31
-    gabriel "Guh...!"
-    show stephanie neutral at t33
-    stephanie "That's to be expected. It's the first day of school, after all."
-    stephanie "By the way... Sarita, you were shaking pretty hard earlier. Are you feeling alright?"
-    sarita_s awkward "Y-yeah... My heart was just pounding the second they called my name..."
-    show maria neutral with dissolve_character
-    maria "Steph's the only one who didn't flinch."
-    show stephanie smile with dissolve_character
-    stephanie "Well, I'm used to being in front of people."
-
-    # Screen tint or subtle vignette effect to show internal isolation
-    show vignette onlayer top at vignette
-
-    "While we were talking, my ears caught the quiet giggling and murmurs from the seats behind us."
-
-    show stephanie at hide
-    hide stephanie
-    show maria at hide
-    hide maria
-    show gabriel at hide
-    hide gabriel
-
-    s1 "That's them! Stephanie and her group!"
-    s2 "I know, I follow her art account! But wait... who's the white-haired girl with them?"
-    s3 "Oh, that's the weird girl who turned bright red and froze during her intro, lol."
-    s1 "Yikes. She looks like a total outcast clinging to Steph..."
-
-    "I kept my eyes glued to my desk and endured every comment. I told myself it was just first-day talk... that it would stop soon."
-
-    # --- SCENE 4 --- 
-    hide screen location_header with dissolve
-    $ quick_menu = False
-    scene black with fade
-    hide top_frame with dissolve
-    hide bottom_frame with dissolve
-    hide vignette onlayer top with dissolve
-
-    scene black with fade
-    $ quick_menu = True
-        
-    "A week passed. The whispers didn't stop. If anything, the harsh glares and subtle insults only grew worse."
+    "A week passed. The whispers didn't stop. If anything, the harsh glares and the bullying only grew worse."
+    "They created fake rumors, stole one of my belongings, and even threw a bucket of water at me where Stephanie couldn't see me."
     "All I could do was put my head down and endure it."
-
-    scene bg classroom with dissolve_scene_full
-    show top_frame at top_bar_pos
-    show bottom_frame at bottom_bar_pos
-    show screen location_header("Classroom")
-
-    show stephanie smile at t11
-    stephanie "Sarita, do you want to grab lunch with us today?"
-    show stephanie neutral with dissolve_character
-    stephanie "...Sarita?"
-
-    "Stephanie steps closer and taps my shoulder."
-
-    stephanie "Hey, are you okay? You look pale."
-    sarita_s awkward "Y-yeah! I'm fine... just tired. Shall we go?"
-    stephanie "Hm, If you say so…"
-
-    show stephanie at hide
-    hide stephanie
-
-    show vignette onlayer top at vignette
-    s1 "Tch. She's always tailing behind Stephanie like a lost puppy."
-    s2 "Right? It's so annoying to watch."
-    s3 "Hey... girls, I have an idea."
-
-    scene black with fade
-    hide vignette onlayer top with dissolve
-
-    # TODO: CG #1 —— Sarita looking through her things at her bag.
-    # scene cg sarita_01 with dissolve
-    sarita "..."
-    sarita "Wait... where's my project?"
-    "I'm pretty sure I brought it before I left home…"
-
-    sarita "H-hey, Steph...?"
-    stephanie "What's up?"
-    sarita "Have you seen my project?"
-    # She's checking her own screen without looking up
-    stephanie "Hmm? Which project are you referring to?"
-    sarita "Our science project."
-    stephanie "Well, no. Did you leave it somewhere else or—"
-    sarita "No! I checked everywhere! My bag, under the desk... it's gone!"
-    stephanie "Okay, okay, calm down now. You can just make it again since the deadline is still tomorrow. I can help you."
-
-    sarita "No, sarita! You don't understand! I worked hard on it! I worked tirelessly just to finish it! I can't just… I can't just lose it…!"
-
-    "We asked the rest of the class, but everyone claimed they didn't see a thing."
-    "And then, across the room, I saw those three girls in the back row."
-    "Behind their fake sympathetic expressions and hollow grins, I finally know the truth."
-    "They took it... and Steph didn't even notice it."
-
-
+    "Then, one day…"
     hide screen location_header with dissolve
     $ quick_menu = False
+    stop music fadeout 1.5
     scene black with fade
     hide top_frame with dissolve
     hide bottom_frame with dissolve
-    hide vignette onlayer top with dissolve
 
-    ## ========================================== 
-    ## =============== ACT II =================== 
-    ## ========================================== 
+    # pls take a pic of this I beg you
+    # TODO: scene bg fountain with dissolve_scene_full   
     scene black with fade
+    play music bg3 fadein 1.0 volume 0.5 loop
+    show top_frame at top_bar_pos
+    show bottom_frame at bottom_bar_pos
+    show screen location_header("Garden")
     $ quick_menu = True
-    scene bg comlab with dissolve_scene_full
+    play sound suspense
+    stephanie "...ta."
+    stephanie "...rita."
+    stephanie "Sarita!"
+    show sarita neutral at fi21
+    show stephanie angry at fi22
+    sarita "!"
+    show sarita awkward at s21
+    sarita "Y-yeah? What were you telling me again?"
+    stephanie neutral "Is everything alright? You've been spacing out lately. "
+    show sarita neutral:
+        ypos 1.30
+        easein_cubic .30 ypos 1.20
+    menu:
+        sarita "I, uh…"
+        "I'm okay.":
+            show sarita happy with dissolve_character
+            sarita "I'm alright, don't worry about me."
+            stephanie "Okay. If it's something you can't tell me, I'll let you be."
+            show sarita neutral with dissolve_character
+            sarita "Mhm."
+        "...":
+            sarita "..."
+            stephanie "Sarita?"
+            show sarita happy with dissolve_character
+            sarita "It's nothing."
+            stephanie "{i}*Sigh*{/i} Whatever it is, I'm not prying into your own personal stuff. But you better tell me when you need help, okay?"
+            show sarita neutral with dissolve_character
+            sarita "Mhm."
+
+    stephanie "It's your turn for your computer programming session by the way."
+    show sarita awkward with dissolve_character
+    sarita "Oh, right. I almost forgot, thank you for reminding me."
+    show stephanie smile with dissolve_character
+    stephanie "Now off you go."
+
+    # scene black with fade
+    # TODO: First imagemap that leads to the 2nd floor by taking the upstairs
+    # NOTE: This will be discarded as it's just gonna be a waste of time honestly
+    # call screen upstairs_to_comlab
+
+
+label main_ch01_preconflict():
+    hide screen location_header with dissolve
+    $ quick_menu = False
+    stop music fadeout 1.5
+    scene black with fade
+    hide top_frame with dissolve
+    hide bottom_frame with dissolve
+
+    scene bg comlab with dissolve_scene_half
+    play music bg3 fadein 1.0 volume 0.5 loop
     show top_frame at top_bar_pos
     show bottom_frame at bottom_bar_pos
     show screen location_header("Computer Lab")
-
-    "A week passed after I lost the one I worked hard for. It was a great thing that I made another one and was still able to pass. But I can't forgive them for it."
-    "Anyways, our first class today is programming. The computer lab was quiet, filled only with the steady clicking of mechanical keyboards."
-    "Apparently, the computer that I was using yesterday was taken by a classmate of mine. So I ended up sitting to stephanie's computer."
-
-    sarita_s "Huh...?"
+    
+    $ quick_menu = True
+    "Ironically, I was too early so there were only a few people in the computer lab."
+    "While browsing through the computers, I saw one where its screen was glowing brightly"
+    "I went to the computer and what I saw was…"
 
     hide screen location_header with dissolve
-    $ quick_menu = False
-    scene black with fade
     hide top_frame with dissolve
     hide bottom_frame with dissolve
-
-    # TODO: CG #2 —— Sarita staring at sarita's computer
-    scene cg sarita_lab01 with dissolve_cg
-    $ quick_menu = True
-    "The monitor lit up. It seems like she forgot to log out her accounts. On the screen was stephanie's primary social media accounts and a personal cloud storage."
-    sarita "{i}*mumbling*{/i} She was so rushed to meet her fans after her turn that she didn't even sign out."
-    "My fingers hovered over the keyboard. Her entire private life was wide open right in front of me."
-    sarita "{i}*mumbling*{/i} I could log her out safely... or check her messages and see what she really says about me behind my back."
-
-    "All of a sudden, the sound of vibrations emitted from my phone. Hearing the song from my favorite artist 'wave to earth' was enough to tell that someone was indeed calling me."
-
+    scene cg sarita_lab01 with dissolve_scene_half
+    "Fortunately, no one has noticed nor touched the computer at all. It was just sitting there—it's like—it was waiting for me."
+    ### TODO: Should show an exclamation bubble or a bell pop up during this specific dialogue
+    # - also add "mikudayo" sfx with a bell followed by it
+    # play sound miku_ringtone
+    "All of a sudden, the sound of vibrations emitted from my phone. Hearing my favourite voiceline from my favourite character {i}Hatsune Miku{/i} with a follow up sound effect of a bell was enough to tell that someone messaged me."
     "My hands reached for my phone."
-    sarita "...an unknown number? They might have made a mistake. I better tell them off."
-
-    $ caller_name = "???"
-    $ quick_menu = False
-    scene black with dissolve_cg
+    scene cg sarita_computer_front with dissolve_cg
+    sarita "(An unknown number? Wait…)"
     window hide
-    show screen chat_logs with dissolve_scene_half
+    $ reset_phone_data()
+    $ phone_start()
+    # Params: sender, msg, channel_name
+    $ send_phone_message(msgr_name, "How are you doing, Sarita?", "themessenger", do_pause=False)
+    play sound notif_wonderhoy
+    $ phone_pause(0.85)
+    "!"
+    show screen phone_ui with moveintop
+    # NOTE: Instead of an exclaation mark in a dialogue, maybe show a exclamation sticker instead.
+    # Params: preview_msg, msg_sent, action (Call/Jump)
+    window hide
+    $ present_phone_choices([
+        ("How do you know my name?", None, Jump("msgrintro_firstchoice")), 
+        ("Who are you?", "Who is this? A classmate of mine? A stalker?", Jump("msgrintro_secondchoice"))
+        ], "themessenger")
 
-    snvl "H-hello…?"
-    caller "Well, well. What do we have here? How pitiful of you, sarita."
-    snvl "W-Who are you and how did you know my name?!"
-    caller "Calm down. I'm just a friend who sees how much you suffer while that 'best friend' of yours shines."
-    caller "Now, look at the screen. One click, and you can give her a taste of her own medicine."
-    snvl "I… I shouldn't…"
-    caller "I know, I know. You're her 'best friend'"
-    caller "How hilarious. Does she even deserve you? She looked like she barely cared when your project was missing. Making a new one she says? Haha! It must be nice having someone to make your project isn't it?"
-    snvl "W-what gives you the right to—?!"
-    caller "Oh no no, don't be such a hypocrite now. You wanted her out of your life didn't you?"
+label msgrintro_firstchoice:
+    $ send_phone_message(msgr_name, "I'm afraid that will be none of your business.", "themessenger")
+    jump msgrintro_aftermath
+    return
 
-    nvl_n "Every insult from the past two weeks echoed in my head. My chest burned with resentment."
+label msgrintro_secondchoice:
+    $ send_phone_message(msgr_name, "Calling me a stalker… that hurts me you know.", "themessenger")
+    $ send_phone_message(msgr_name, "Though, I guess you could say that.", "themessenger")
+    jump msgrintro_aftermath
+    return
 
-    snvl "How...Do you know all of that?"
-    caller "I'm afraid that'd be out of your business."
-    caller "So? What are you going to do, sarita?"
+label msgrintro_aftermath:
+    $ send_phone_message(msgr_name, "Either way, I did message you out of nowhere and I do apologize for that.", "themessenger")
+    $ present_phone_choices([
+        ("What's your motive?", "What's your purpose for messaging me?", None)
+        ], "themessenger")
+    $ send_phone_message(msgr_name, "It's not a big deal. I've seen you get bullied by those girls and I just want to say that I've experienced being bullied by them before. I ended up getting suspended for one week, yet they were free. Life's pretty unfair isn't it?", "themessenger")
+    $ send_phone_message(phone_config["phone_player_name"], "...and?", "themessenger")
+    $ send_phone_message(msgr_name, "Well, I just want to help you that's all. Look, I got the credentials on one of their accounts. In fact, I know what they're planning for you next.", "themessenger")
+    $ send_phone_message(phone_config["phone_player_name"], "What do you want me to do?", "themessenger")
+    $ send_phone_message(msgr_name, "It's quite simple. I'll let you in their group chat and do whatever you want to do with it. Report them, harass them, spread the rumors—I'll let you be. As long as you agree with helping me destroy their pride and make them suffer the way they've made us suffer. So, what do you say?", "themessenger")
+    $ present_phone_choices([
+        # Pre bad ending
+        ("Fine, I'll do it.", "...sure. I'll do it.", Jump("pre_badending_choices")), 
+        # Pre good ending
+        ("(Ask him how to get in)", "Can I ask a question first? How would you exactly let me in their group chat?", Jump("pre_goodending_choices")), 
+        # Pre neutral ending
+        ("I need to think about it.", "Give me time to think about it first...", Jump("pre_neutralending_choices"))
+        ], "themessenger")
+
+# ---------------------------
+label pre_badending_choices:
+    $ send_phone_message(msgr_name, "Good... good. I knew I'd count on you.", "themessenger")
+    $ send_phone_message(msgr_name, "For starters, you have to login your account with this link first and I'll let you in.", "themessenger")
+    $ send_phone_message(msgr_name, "https://facebook.net/login/13ab2wra20aivnk6qlea?register=", "themessenger")
+    $ send_phone_message(msgr_name, "It's safe no worries. I'm not evil enough to trick you, am I right?", "themessenger")
+    $ send_phone_message(phone_config["phone_player_name"], "Alright...", "themessenger")
+    jump pre_bad
+
+label pre_goodending_choices:
+    $ send_phone_message(msgr_name, "I'll be dropping a link for you to log in, then you will get automatically added to their group. Simple as that.", "themessenger")
+    $ send_phone_message(msgr_name, "Why? Got any problems?", "themessenger")
+    pause
+    hide screen phone_ui with moveoutbottom
+    $ phone_end()
+    sarita "(That's already suspicious on its own… What should I do?)"
+    window hide
+    # TODO: Please do this I swear
+    menu:
+        "(Ignore the unknown number)":
+            sarita "(I think it'd be better if I ignored this.)"
+            $ renpy.sound.play("audio/assets/images/phone/receive.mp3", channel="sound")
+            # NOTE: I think we make the the exclamation sticker(?) appear here again just for dramatic effect
+            sarita "!"
+            $ phone_start()
+            show screen phone_ui
+            window hide
+            $ send_phone_message(msgr_name, "Ah ah. Don't even think of running away now.", "themessenger")
+            $ send_phone_message(msgr_name, "You already agreed. There's no turning back now.", "themessenger")
+            window show
+            sarita "(Since when did I agree?)"
+            sarita "(Are they just purposely dumb?)"
+
+        "(Screenshot the whole conversation and report it to the ICT administrator)":
+            sarita "(If they are ever here, I need to keep my composure and pretend that I'm going to the bathroom.)"
+            "After going outside, I screenshotted the whole conversation and I immediately ran as fast as I could to report the whole conversation to an ICT administrator."
+            "They told me that they will pinpoint the suspect as soon as possible and I should not be worried anymore."
+            jump good_ed
+
+
+    # $ present_phone_choices([("(Screenshot the whole conversation and report to the ICT administrator)", None, Jump("sarita_reports")), ("", None, Jump())], "themessenger")
+    
+label pre_neutralending_choices:
+    $ send_phone_message(msgr_name, "Why the sudden hesitation? Don't tell me you're siding with them?", "themessenger")
+    jump pre_neutralending_choices02
+
+
+label pre_neutralending_choices02:
+    $ choices = [
+        ("Alright, fine. I'll help you.", None, Jump("s_helps")), 
+    ]
+
+    python:
+        if not s_curious_done:
+            choices.insert(0, ("Can't you just do it yourself?", None, Jump("s_curious")))
+        if not s_doubts_done:
+            choices.insert(0, ("What if I don't agree?", "...and what If I don't agree with your plan?", Jump("s_doubts")))
+        if s_doubts_done:
+            choices.append(("How would you let me in?", "How would you let me in their group chat?", Jump("s_hesitates")))
+
+    $ present_phone_choices(choices, "themessenger")
+    return
+
+# -----------------------------
+label s_curious:
+    $ send_phone_message(msgr_name, "You do know that I would immediately get caught and be kicked out of this school if I ever report this right?", "themessenger")
+    $ send_phone_message(msgr_name, "I stole one of the girls' accounts and read their chats without consent. Do you think they'd let me off easily?", "themessenger")
+    $ send_phone_message(msgr_name, "Look, I get it if you don't trust me. But you're going to keep getting hurt, as well as the other victims if we don't do something now.", "themessenger")
+    sarita "(That's true...)"
+    window hide
+    $ s_curious_done = True
+    jump pre_neutralending_choices02
+label s_doubts:
+    $ send_phone_message(msgr_name, "Surrrrreeeelly you would—won't you?", "themessenger")
+    $ send_phone_message(msgr_name, "Well, if there was ever a chance that you may not agree, you're going to keep getting hurt as well as the other victims. Don't you think about yourself and others?", "themessenger")
+    $ s_doubts_done = True
+    jump pre_neutralending_choices02
+label s_hesitates:
+    $ send_phone_message(msgr_name, "'ll be dropping a link for you to log in, then you will get automatically added to their group. Simple as that.", "themessenger")
+    $ phone_pause(2.5)
+    $ send_phone_message(msgr_name, "No need to fear as the link is safe. Trust me.", "themessenger")
+    sarita "(It is definitely not safe...)"
+    window hide
+    $ send_phone_message(phone_config["phone_player_name"], "I changed my mind… This… this is wrong. I can't just invade their privacy and expose them. I… I don't want to be like them. And I don't want to be like you either.", "themessenger")
+    $ send_phone_message(msgr_name, "You don't know anything, sarita. They used you, manipulated you, and always picked on you. A small thing like this isn't even that bad compared to what you have experienced.", "themessenger")
+    $ phone_pause(3)
+    $ send_phone_message(msgr_name, "Did you know that your so-called \"best friend\" planned all this? She was pretending to be your best friend. She hates you, she's jealous of you. If you don't do this, you'll surely regret this.", "themessenger")
+    $ phone_pause(3.2)
+    $ send_phone_message(phone_config["phone_player_name"], "Even if that is true, you're just using me as an excuse to commit horrible acts against them.", "themessenger")
+    $ phone_pause(3.2)
+    $ send_phone_message(phone_config["phone_player_name"], "Besides, there's also a possibility that what you're going to send won't be legitimate and could potentially steal my information if I were to insert my credentials.", "themessenger")
+    $ phone_pause(4.0)
+    $ send_phone_message(phone_config["phone_player_name"], "Hello???", "themessenger")
+    pause 1.0
+    hide screen phone_ui with moveoutbottom
+    $ phone_end()
+    jump pre_neutral
+    
+label s_helps:
+    $ send_phone_message (msgr_name, "I'll drop a link for you to log in, which will automatically add you to their group chat. Simple as that, right?", "themessenger")
+    $ send_phone_message(phone_config["phone_player_name"], "...alright.", "themessenger")
+    $ send_phone_message (msgr_name, "That's great to know. I knew I'd trust you.", "themessenger")
+    $ send_phone_message (msgr_name, "Here's the link.", "themessenger")
+    $ send_phone_message (msgr_name, "https://facebook.net/login/13ab2wra20aivnk6qlea?register=", "themessenger")
+    jump pre_bad

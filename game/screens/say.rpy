@@ -14,9 +14,10 @@ init offset = -1
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
 screen say(who, what):
-
+    zorder 100
     window:
         id "window"
+        background(None if phone_mode else Image("gui/textbox.png", xalign=0.5, yalign=1.0))
 
         if who is not None:
 
@@ -51,8 +52,9 @@ style window:
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
-
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    # background ConditionSwitch(
+    #     "None", phone_mode,
+    #     "True",  Image("gui/textbox.png", xalign=0.5, yalign=1.0))
 
 style namebox:
     xpos gui.name_xpos

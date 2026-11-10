@@ -6,7 +6,7 @@
 define dissolve = Dissolve(0.25)
 define dissolve_cg = Dissolve(0.75)
 define dissolve_scene = Dissolve(1.0)
-define dissolve_character = Dissolve(0.5, alpha=True)
+define dissolve_character = Dissolve(0.3, alpha=True)
 define dissolve_scene_full = MultipleTransition([
     False, Dissolve(1.0),
     Solid("#000"), Pause(1.0),
@@ -293,7 +293,7 @@ transform fadeout(x=960, z=cg_z):
     yoffset 0 yanchor 1.0 ypos 1.20
     zoom z*1.00
     alpha 1.00
-    easein_cubic 0.3 alpha 0.0
+    easein_cubic 0.7 alpha 0.0
 
 transform fo11(z=cg_z):
     fadeout(960, z)
@@ -305,6 +305,8 @@ transform fo31(z=cg_z):
     fadeout(300, z)
 transform fo32(z=cg_z):
     fadeout(950, z)
+transform fo33(z=cg_z):
+    fadeout(1540, z)
 
 transform fadein(x=960, z=cg_z):
     subpixel True
@@ -324,6 +326,8 @@ transform fi31(z=cg_z):
     fadein(300, z)
 transform fi32(z=cg_z):
     fadein(950, z)
+transform fi33(z=cg_z):
+    fadein(1540, z)
 
 transform vignette:
     alpha 0

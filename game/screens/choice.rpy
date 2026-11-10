@@ -35,14 +35,13 @@ screen choice(items):
         for i in items:
             textbutton i.caption action i.action
 
-
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
 
 style choice_vbox:
-    xalign 0.77
-    yalign 1.5
+    xalign 0.5
+    yalign 0.5
     # xoffset -30
     # ypos 500
     # yanchor 0.5
@@ -51,9 +50,11 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    idle_background Frame("gui/button/choice_idle_background.png", gui.choice_button_borders)
+    hover_background Frame("gui/button/choice_hover_background.png", gui.choice_button_borders)
 
 style choice_button_text is default:
-    properties gui.text_properties("choice_button")
+    properties gui.button_text_properties("choice_button")
 
 
 ## Quick Menu screen ###########################################################

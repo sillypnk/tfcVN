@@ -24,6 +24,7 @@ define maria = Character('Maria', ctc="ctc", ctc_position="fixed", image="maria"
 define s1 = Character('???', ctc="ctc", ctc_position="fixed", callback = name_callback, cb_name="s1")
 define s2 = Character('???', ctc="ctc", ctc_position="fixed", callback = name_callback, cb_name="s2")
 define s3 = Character('???', ctc="ctc", ctc_position="fixed", callback = name_callback, cb_name="s3")
+define s4 = Character('ICT Administrator', ctc="ctc", ctc_position="fixed", callback = name_callback, cb_name="s4")
 
 ## This is for the vhs calling screen
 default vhs_slots = {"left": ("r1", ""), "right": ("c2", "")}
@@ -71,6 +72,7 @@ define caller = Character("[caller_name]", kind=nvl, ctc="ctc_nvl", ctc_position
 image s1 = "assets/images/characters/silhouette.png"
 image s2 = "assets/images/characters/silhouette-2.png"
 image s3 = "assets/images/characters/silhouette-3.png"
+image s4 = "assets/images/characters/silhouette-3.png"
 
 layeredimage stephanie:
     at sprite_highlight('stephanie')
@@ -155,10 +157,11 @@ define audio.bg4 = "audio/Out of the cold, into the Warmth.mp3"
 define audio.main = "audio/2.ogg"
 
 # Sound Effects
-define audio.suspense = "audio/suspense_buildup.mp3"
-define audio.chair_move = "audio/chair_move.mp3"
-define audio.chair_drag = "audio/chair_drag.mp3"
-define audio.body_fall = "audio/body_fall.mp3"
-define audio.clock_ticking = "audio/clock_ticking.mp3"
-define audio.sliding_door_open = "audio/sliding_door_open.mp3"
-define audio.sliding_door_slam = "audio/sliding_door_slam.mp3"
+define audio.suspense = "assets/audio/sfx/suspense_buildup.mp3"
+# define audio.chair_move = "audio/chair_move.mp3"
+# define audio.chair_drag = "audio/chair_drag.mp3"
+# define audio.body_fall = "audio/body_fall.mp3"
+# define audio.clock_ticking = "audio/clock_ticking.mp3"
+# define audio.sliding_door_open = "audio/sliding_door_open.mp3"
+# define audio.sliding_door_slam = "audio/sliding_door_slam.mp3"
+define audio.notif_wonderhoy = "assets/audio/sfx/wonderhoy.mp3"

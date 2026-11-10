@@ -598,3 +598,9 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+screen upstairs_to_comlab():
+    imagemap:
+        ground "assets/images/splash/comlab_outside_idle.jpg"
+        hover "assets/images/splash/comlab_outside_hovered.jpg"
+        hotspot (699, 117, 539, 918) action Jump("main_ch01_preconflict")
