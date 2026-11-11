@@ -84,7 +84,7 @@ init -1 python:
         "emojis": {
             "size": 32,
         },
-        "phone_theme": "dark",  # default theme
+        "phone_theme": "light",  # default theme
         "light": {
             # colours for light mode
             "message_player_text_colour": "#FFFFFF",
@@ -586,6 +586,7 @@ init -1 python:
 default phone_zoom = 0.9
 default phone_x = 0.5
 default phone_y = 0.5
+default msgvw_ysize = 200
 transform phone_position(p_zoom, p_x, p_y):
     anchor(0.5, 0.5) 
     pos(p_x, p_y)
@@ -598,13 +599,14 @@ image emoji_dizzy = "assets/images/phone/emoji/dizzy.png"
 screen phone_ui():
     zorder 10
     default was_channel_unread = False
-    default msgvw_ysize = 620
+    
     window:
         at phone_position(phone_zoom, phone_x, phone_y)
         xalign 0.5
         yalign 0.5 
+        # NOTE: Change this for the phone size as well just in case or something idk
         xsize 600
-        ysize 1000
+        ysize 1031
         # screen goes first as base will cover up some of it
         add get_phone_theme_value("screen_background_image")
         add get_phone_theme_value("header_background_image")
@@ -623,10 +625,10 @@ screen phone_ui():
         # viewport to hold messages for scrolling
         vbox:
             id "phone_viewport"
-            xsize 450
+            xsize 445
             # NOTE: Change this if there's a problem with choices/messages overflowing
-            ysize 775
-            yalign 0.325
+            ysize 990
+            yalign 0.125
             xalign 0.475
             vbox:
                 spacing 10
@@ -653,7 +655,7 @@ screen phone_ui():
                         id "message_viewport" 
                         xfill True
                         # NOTE: Change this if there's a problem with choices/messages overflowing
-                        ysize msgvw_ysize
+                        ysize 670
                         yadjustment yadj
                         scrollbars "vertical"
                         mousewheel True
@@ -710,7 +712,7 @@ screen phone_ui():
                         id "message_viewport" 
                         xfill True
                         # NOTE: Change this if there's a problem with choices/messages overflowing
-                        ysize msgvw_ysize
+                        ysize 670
                         yadjustment yadj
                         scrollbars "vertical"
                         mousewheel True
